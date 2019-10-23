@@ -1,0 +1,52 @@
+/*Две колонки с одинаковыми высотами*/
+:root {
+  box-sizing: border-box;
+  font-size: calc(0.5em + 1vw);
+  --main-font: Helvetica, Arial, sans-serif;
+  --margin-cell: 1.5em;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+body {
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+  color: #fff;
+  background-color: #0072b0;
+  border-radius: .5em;
+}
+.wrapper {
+  margin-left: calc(-1*var(--margin-cell));
+  margin-right: calc(-1*var(--margin-cell));
+}
+
+.container {
+  display: table;
+  width: 100%;
+  border-spacing: var(--margin-cell) 0;
+}
+
+/*main {
+  display: block;
+}*/
+
+.main {
+  display: table-cell;
+  width: 70%;
+  background-color: #fff;
+  border-radius: .5em;
+}
+
+.sidebar {
+  display: table-cell;
+  width: 30%;
+  /*margin-left: 1em;/*не работает при display: table*/
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: .5em;
+}

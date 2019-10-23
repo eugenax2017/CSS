@@ -1,0 +1,52 @@
+</<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test dicionario</title>
+  <script type="text/javascript">
+
+  </script>
+</head>
+
+<body>
+  <input type='file' accept='image/*' onchange='openFile(event)'><br>
+  <img id='output'>
+  <script>
+      var openFile = function(event, callback) {
+        var input = event.target;
+        var reader = new FileReader();
+        reader.readAsText(input.files[0]);
+        reader.onload = function() {
+          callback(reader.result);
+        }
+        function callback(result) {
+          //result = result.replace(/\s+/g, '');
+          var data = JSON.parse(result);
+          for (var i=0; i<=data.users.length-1; i++) { //перебор элементов массива
+            // if (person.children[i].hasOwnProperty(key)) {
+            //i = индекс
+            //значение = person.children[i]
+            console.log("Элемент [ "+ i +" ] = " + data.users[i]);
+            var items = data.users[i];
+            for (key in items) {
+              if (items.hasOwnProperty(key)) {
+                //ключ = key
+                //значение = person[key]
+                console.log("Ключ = " + key);
+                console.log("Значение = " + items[key]);
+              } // если объект person имеет key (если у person есть свойство key)
+            } // перерабрать все ключи (свойства) в объекте
+        }
+        console.log(data);
+
+      }
+      //result = result.replace(/\s+/g, '');
+      //var data = JSON.parse(result);
+      //console.log(result);
+    };
+  </script>
+
+</body>
+
+</html>

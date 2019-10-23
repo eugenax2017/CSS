@@ -1,0 +1,66 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(0.5em + 1vw);
+  --main-font: Helvetica, Arial, sans-serif;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+header {
+  /*padding: 4em 0; горизонтальное выравивание*/
+  /*padding: .1em .1em; /*исключает схлопывание отступов снаружи элементов*/
+  /*overflow: auto; /*также исключает схлопывание отступов снаружи элементов*/
+  color: #fff;
+  background-color: #0072b0;
+  border-radius: .5em;
+}
+
+body {
+  background-color: #eee;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: flex; /*не бывает отступов снаружи элементов*/
+}
+
+.main {
+  width: 70%;
+  background-color: #fff;
+  border-radius: .5em;
+}
+
+.sidebar {
+  width: 30%;
+  margin-left: 1em;
+  padding: 1.5em;
+  background-color: #fff;
+  border-radius: .5em;
+}
+
+.button-link {
+  display: block;
+  padding: .5em;
+  /*margin-top: 1.5em; /*сверху слишком большой отступ padding контейнера + margin здесь, решение ниже*/
+  color: #fff;
+  background-color: #0090C9;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-link + .button-link {
+  margin-top: 1.5em;/*решение для проблемы сверху*/
+}
+
+.sponsor-link {
+  display: block;
+  color: #0072b0;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.5em;
+
+}
