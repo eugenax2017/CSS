@@ -1,0 +1,6 @@
+echo "# CSS" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:eugenax2017/CSS.git
+git push -u origin master
