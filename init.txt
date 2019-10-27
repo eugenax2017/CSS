@@ -35,4 +35,6 @@ git checkout --conflict=diff3 --merge file_name - просмотр резуль�
 git show :3:file_name - показать сливаемый файл
 git add file_name
 git commit или git merge --continue
+git push origin --delete <branchName> - удалить ветку удаленно
+git branch -D имя_ветки - удалить ветку локально
 =============================================================================
