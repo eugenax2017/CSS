@@ -1,4 +1,12 @@
+<<<<<<< ours
 function add(a, b) {
   var c=(a+b)*4;
   return c;
 }
+||||||| base
+=======
+function add(a, b) {
+  var c=(a+b)*2;
+  return c;
+}
+>>>>>>> theirs
