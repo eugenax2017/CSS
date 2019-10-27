@@ -8,15 +8,31 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:eugenax2017/CSS.git
-переключение на HTTPS git remote set-url origin https://github.com/eugenax2017/CSS.git 
+переключение на HTTPS git remote set-url origin https://github.com/eugenax2017/CSS.git
+просмотр пультов git remote -v
 git push -u origin master
 создание ветки: git checkout -b name_branch
 переключение ветки: git checkout name_branch
 git diff - просмотр различий
 git diff name_branch - просмотр различий в ветке
+git diff --name-only name_branch - просмотр различий в ветке
 git log - просмотр лог-файла
 git branch - просмотр список веток
 dir (Windows) = ls (Linux)
 git clone git@github.com:eugenax2017/CSS.git (SSH)
 .gitignore - пустой файл для хранения игнорируемых файлов и расширений для git
 git@github.com:eugenax2017/CSS.git = https://github.com/eugenax2017/CSS.git
+===========================================================================
+слияние веток
+git merge name_branch
+разрешение конфликтов при слиянии:
+git checkout --ours file_name - оставить первоначальную версию версию
+git checkout --theirs file_name - оставить последнюю версию
+git checkout --merge file_name - слияние
+git reset --hard - отказаться от слияния всех файлов, вернуть как было (git merge --abort)
+git reset --merge - отказаться от слияния файлов, у которых конфликт
+git checkout --conflict=diff3 --merge file_name - просмотр результат трех файлов
+git show :3:file_name - показать сливаемый файл
+git add file_name
+git commit или git merge --continue
+=============================================================================
