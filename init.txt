@@ -8,6 +8,7 @@ git init
 git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:eugenax2017/CSS.git
+переключение на HTTPS git remote set-url origin https://github.com/eugenax2017/CSS.git 
 git push -u origin master
 создание ветки: git checkout -b name_branch
 переключение ветки: git checkout name_branch
