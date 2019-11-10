@@ -2,6 +2,8 @@ echo "# CSS" >> README.md
 настройка GIT
 git config --g user.name "Eugene Aksimenko"
 git config --g user.email "eugenax2017@gmail.com"
+git config --global core.editor emacs - настройка редактора (может быть vim)
+git config --list - просмотр настроек
 создание папки git mkdir name_folder
 переход в папку cd name_folder
 git init
