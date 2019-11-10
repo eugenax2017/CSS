@@ -9,7 +9,7 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git@github.com:eugenax2017/CSS.git
 переключение на HTTPS git remote set-url origin https://github.com/eugenax2017/CSS.git
-просмотр пультов git remote -v
+git remote -v - просмотр пультов
 git push -u origin master
 создание ветки: git checkout -b name_branch
 переключение ветки: git checkout name_branch
@@ -22,6 +22,10 @@ dir (Windows) = ls (Linux)
 git clone git@github.com:eugenax2017/CSS.git (SSH)
 .gitignore - пустой файл для хранения игнорируемых файлов и расширений для git
 git@github.com:eugenax2017/CSS.git = https://github.com/eugenax2017/CSS.git
+===========================================================================
+команды FETCH и PULL
+git fetch origin master - только получение изменений из удаленного репозитория, без слияния
+git pull origin master - получение изменений из удаленного репозитория и слияние
 ===========================================================================
 слияние веток
 git merge name_branch
