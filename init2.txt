@@ -1,4 +1,4 @@
 function add(a, b) {
-  var c=(a+b)*3;
+  var c=(a+b)*300;
   return c;
 }
