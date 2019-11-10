@@ -1,0 +1,76 @@
+:root {
+  box-sizing: border-box;
+  --main-font: Helvetica, Arial, sans-serif;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+      background-color: #eee;
+      font-family: Helvetica, Arial, sans-serif;
+}
+
+body * + * { /*применяем отступ ко всем после тэга body lobotomized owl top margin*/
+  margin-top: 1.5em;
+}
+
+.container {
+  max-width: 1080px; /*центрирование doble-container: body is outer container 100% width, .container is inner*/
+  margin: 0 auto; /*left & right - по всему пространству*/
+}
+
+header {
+  padding: 1em 1.5em;
+  color: #fff;
+  background-color: #0072b0;
+  border-radius: .5em;
+  margin-bottom: 1.5em;
+}
+
+.main {
+  padding: 0 1.5em;
+  background-color: #fff;
+  border-radius: .5em;
+}
+
+.media {
+  float: left;
+  margin: 0 1.5em 1.5em 0; /*выравнивание по верху и вставка разделителя*/
+  width: calc(50% - 1.5em); /*выравнивание по верху и вставка разделителя*/
+  /*width: 50%;*/
+  padding: 1.5 em;
+  background-color: #eee;
+  border-radius: 0.5em;
+}
+
+.media:nth-child(odd) {
+  clear: left; /*выравивает ячейки, очищая пространство перед нечетными флоатами*/
+}
+
+.clearfix::before, /*выравнивает заголовок по центру*/
+.clearfix::after {
+  display: table;/*чтобы избежать collapsing margins*/
+  content: " ";
+}
+
+.clearfix::after {
+  clear: both; /*добавляет вместо div clearbox см html*/
+  /*применяется только к block-уровневым объектам: block, table, div, не table-cell -это не блок-элемент*/
+}
+
+.media-image {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.media-body {
+  margin-top: 0;
+  overflow: auto; /*BFC: or float, display, position*/
+}
+
+.media-body h4 {
+  margin-top: 0;
+}

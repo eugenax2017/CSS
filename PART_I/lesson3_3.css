@@ -26,7 +26,7 @@ header {
   border-radius: .5em;
 }
 
-body * + * { /*применяем отсут ко всем после тэга body lobotomized owl top margin*/
+body * + * { /*применяем отступ ко всем после тэга body lobotomized owl top margin*/
   margin-top: 1.5em;
 }
 

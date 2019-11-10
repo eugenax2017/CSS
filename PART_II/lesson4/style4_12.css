@@ -1,0 +1,98 @@
+:root {
+  box-sizing: border-box;
+  --main-font: Helvetica, Arial, sans-serif;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+      background-color: #eee;
+      font-family: Helvetica, Arial, sans-serif;
+}
+
+body * + * { /*применяем отступ ко всем после тэга body lobotomized owl top margin*/
+  margin-top: 1.5em;
+}
+
+.container {
+  max-width: 1080px; /*центрирование doble-container: body is outer container 100% width, .container is inner*/
+  margin: 0 auto; /*left & right - по всему пространству*/
+}
+
+header {
+  padding: 1em 1.5em;
+  color: #fff;
+  background-color: #0072b0;
+  border-radius: .5em;
+  margin-bottom: 1.5em;
+}
+
+.main {
+  padding: 0 1.5em 1.5em;
+  background-color: #fff;
+  border-radius: .5em;
+}
+
+.row {
+  margin-left: -0.75em; /*вытягивает ширину строки на уровень заголовка "Running tips"*/
+  margin-right: -0.75em; /*вытягивает ширину строки на уровень заголовка*/
+}
+
+.media {
+  padding: 1.5em;
+  background-color: #eee;
+  border-radius: 0.5em;
+}
+
+.clearfix::before, /*выравнивает заголовок по центру*/
+.clearfix::after {
+  display: table;/*чтобы избежать collapsing margins*/
+  content: " ";
+}
+
+.clearfix::after {
+  clear: both; /*добавляет вместо div clearbox см html*/
+  /*применяется только к block-уровневым объектам: block, table, div, не table-cell -это не блок-элемент*/
+}
+
+.media-image {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.media-body {
+  margin-top: 0;
+  overflow: auto; /*BFC: or float, display, position*/
+}
+
+.media-body h4 {
+  margin-top: 0;
+}
+
+.row::after {
+  display: block;
+  content: " ";
+  clear: both;
+}
+
+[class*="column-"] {
+  float: left;
+  padding: 0 0.75em;
+  margin-top: 0;
+}
+
+.column-1 { width: 8.3333%; } /*1/12*/
+.column-2 { width: 16.6667%; } /*2/12*/
+.column-3 { width: 25%; } /*3/12*/
+.column-4 { width: 33.3333%; } /*4/12*/
+.column-5 { width: 41.6667%; } /*5/12*/
+.column-6 { width: 50%; } /*6/12*/
+.column-7 { width: 58.3333%; }
+.column-8 { width: 66.6667%; }
+.column-9 { width: 75%; }
+.column-10 { width: 80.3333%; }
+.column-11 { width: 91.6667%; }
+.column-12 { width: 100%; }
