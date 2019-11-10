@@ -26,15 +26,30 @@ git@github.com:eugenax2017/CSS.git = https://github.com/eugenax2017/CSS.git
 слияние веток
 git merge name_branch
 разрешение конфликтов при слиянии:
+git config merge.tool vimdiff - установить редактор
+git config merge.conflictstyle diff3 - установить тип отображения
+git config mergetool.prompt false - отключить подсказки перед запуском редактора
+git mergetool - запустить редактор
 git checkout --ours file_name - оставить первоначальную версию версию
 git checkout --theirs file_name - оставить последнюю версию
 git checkout --merge file_name - слияние
 git reset --hard - отказаться от слияния всех файлов, вернуть как было (git merge --abort)
 git reset --merge - отказаться от слияния файлов, у которых конфликт
-git checkout --conflict=diff3 --merge file_name - просмотр результат трех файлов
+git checkout --conflict=diff3 --merge file_name - просмотр результата трех файлов
 git show :3:file_name - показать сливаемый файл
 git add file_name
 git commit или git merge --continue
 git push origin --delete <branchName> - удалить ветку удаленно
 git branch -D имя_ветки - удалить ветку локально
 =============================================================================
+работа с редактором и vim
+Ins, i - вставка строки
+Esc - выход в режим командной строки
+:wq + Enter - выход из редактора с записью изменений
+Ctrl + h,j,k,l перемещение между окнами
+Ctrl + W j - переход к результату слияния
+]c,[c - для перехода к следующему и предыдущему различию (или j,k)
+:diffget LO - получить код из локальной версии
+:diffget RE - получить код из удаленной
+:diffget BA - получить код из базовой версии
+:wqa - сохранение результата объединения и закрытие всех окон
