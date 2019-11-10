@@ -7,7 +7,7 @@ git config --list - просмотр настроек
 создание папки git mkdir name_folder
 переход в папку cd name_folder
 git init
-git add README.md
+git add README.md (git reset - удалить файлы из add)
 git commit -m "first commit"
 git remote add origin git@github.com:eugenax2017/CSS.git
 переключение на HTTPS git remote set-url origin https://github.com/eugenax2017/CSS.git
